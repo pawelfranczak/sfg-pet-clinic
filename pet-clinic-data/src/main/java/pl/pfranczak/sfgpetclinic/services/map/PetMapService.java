@@ -2,18 +2,18 @@ package pl.pfranczak.sfgpetclinic.services.map;
 
 import java.util.Set;
 
-import pl.pfranczak.sfgpetclinic.model.Owner;
+import pl.pfranczak.sfgpetclinic.model.Pet;
 import pl.pfranczak.sfgpetclinic.services.CrudService;
 
-public class OwnerMapService extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class PetMapService extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
 
 	@Override
-	public Set<Owner> findAll() {
+	public Set<Pet> findAll() {
 		return super.findAll();
 	}
 
 	@Override
-	public Owner findById(Long id) {
+	public Pet findById(Long id) {
 		return super.findById(id);
 	}
 
@@ -23,12 +23,12 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 	}
 
 	@Override
-	public void delete(Owner object) {
+	public void delete(Pet object) {
 		super.delete(object);
 	}
 
 	@Override
-	public Owner save(Owner object) {
+	public Pet save(Pet object) {
 		return super.save(object.getId(), object);
 	}
 
