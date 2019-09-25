@@ -7,18 +7,17 @@ import pl.pfranczak.sfgpetclinic.model.Owner;
 import pl.pfranczak.sfgpetclinic.model.Vet;
 import pl.pfranczak.sfgpetclinic.services.OwnerService;
 import pl.pfranczak.sfgpetclinic.services.VetService;
-import pl.pfranczak.sfgpetclinic.services.map.OwnerServiceMap;
-import pl.pfranczak.sfgpetclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner{
 	
 	private final OwnerService ownerService;
 	private final VetService vetService;
-	
-	public DataLoader() {
-		ownerService = new OwnerServiceMap();
-		vetService = new VetServiceMap();
+
+	//This will be autowired by spring
+	public DataLoader(OwnerService ownerService, VetService vetService) {
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
 
 	@Override
