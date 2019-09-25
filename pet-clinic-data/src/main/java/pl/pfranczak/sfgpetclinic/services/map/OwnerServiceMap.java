@@ -3,9 +3,9 @@ package pl.pfranczak.sfgpetclinic.services.map;
 import java.util.Set;
 
 import pl.pfranczak.sfgpetclinic.model.Owner;
-import pl.pfranczak.sfgpetclinic.services.CrudService;
+import pl.pfranczak.sfgpetclinic.services.OwnerService;
 
-public class OwnerMapService extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractServiceMap<Owner, Long> implements OwnerService {
 
 	@Override
 	public Set<Owner> findAll() {
@@ -30,6 +30,11 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 	@Override
 	public Owner save(Owner object) {
 		return super.save(object.getId(), object);
+	}
+
+	@Override
+	public Owner findByLastName(String lastName) {
+		return null;
 	}
 
 }

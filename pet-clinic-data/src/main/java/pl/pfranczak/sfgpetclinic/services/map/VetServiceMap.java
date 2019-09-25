@@ -3,9 +3,9 @@ package pl.pfranczak.sfgpetclinic.services.map;
 import java.util.Set;
 
 import pl.pfranczak.sfgpetclinic.model.Vet;
-import pl.pfranczak.sfgpetclinic.services.CrudService;
+import pl.pfranczak.sfgpetclinic.services.VetService;
 
-public class VetMapService extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractServiceMap<Vet, Long> implements VetService {
 
 	@Override
 	public Set<Vet> findAll() {
@@ -30,6 +30,11 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements Crud
 	@Override
 	public Vet save(Vet object) {
 		return super.save(object.getId(), object);
+	}
+
+	@Override
+	public Vet findByLastName(String lastName) {
+		return null;
 	}
 
 }
