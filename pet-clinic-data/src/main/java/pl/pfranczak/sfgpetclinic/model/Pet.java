@@ -2,20 +2,12 @@ package pl.pfranczak.sfgpetclinic.model;
 
 import java.time.LocalDate;
 
-public class Pet {
+public class Pet extends BaseEntity {
 	
-	private Long id;
-
 	private PetType perType;
 	private Owner owner;
 	private LocalDate birthDate;
-	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+
 	public PetType getPerType() {
 		return perType;
 	}
